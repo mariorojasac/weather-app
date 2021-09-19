@@ -1,0 +1,64 @@
+body {
+display: flex;
+justify-content: center;
+background: rgb(2,0,36);
+background: linear-gradient(6deg, rgba(2,0,36,1) 0%, #273aa4 100%, rgba(4,4,122,1) 100%);
+font-family: 'Bebas Neue', cursive;
+color: white;
+text-shadow:1px 1px 10px rgb(12, 12, 17), 1px 1px 10px #ccc;
+height: 100vh;
+background-repeat: no-repeat;
+}
+
+.container {
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin-top: -500px;
+}
+p {
+    margin: 10px;
+margin-left: 0px;
+}
+
+.top{
+display: flex;
+font-size: 60px;
+
+}
+
+.content {
+display: flex;
+flex-direction: column;
+
+}
+
+.city {
+display: flex;
+}
+
+.temp {
+display: flex;
+}
+
+.feel {
+display: flex;
+}
+
+.weather {
+display: flex;
+
+}
+
+form {
+display: flex;
+margin-top: 20px;
+}
+
+input {
+display: flex;
+margin: 10px;
+margin-left: 0px;
+border-radius: 3%;
+border: 6px solid white;
+}
