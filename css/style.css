@@ -163,6 +163,7 @@ and (orientation : landscape) {
     width: 100%;
 
 }
+
 }
 
 /* iPads (portrait) ----------- */
@@ -183,7 +184,12 @@ and (min-width : 1224px) {
 /* Styles */
 .container {
     width: 100%;
+align-items: center;
 
+}
+
+.content {
+    margin-left: -400px;
 }
 }
 
@@ -193,7 +199,7 @@ and (min-width : 1824px) {
 /* Styles */
 .container {
     width: 100%;
-
+align-items: center;
 }
 }
 
