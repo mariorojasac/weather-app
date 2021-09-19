@@ -2,7 +2,7 @@ $(function () {
     // const Variables 
     const BASE_URL = "https://api.openweathermap.org/data/2.5/";
     const API_KEY = "f8b0e07161f016e957b95cd112443cdc";
-    let movieData;
+    let weather;
 
     // cached Elements 
     const $city = $("#city");
@@ -15,8 +15,12 @@ $(function () {
 
     // Event listners 
     $form.on("submit", handleGetData);
-    
-    
+
+    // function deleteData() {
+    //     $('#temp').remove()
+    // }
+
+
     // functions
     function handleGetData(event) {
 
@@ -27,7 +31,7 @@ $(function () {
         // get api
         $.ajax(`${BASE_URL}weather?q=${cityName}&units=imperial&appid=${API_KEY}`).then(
             function (data) {
-                movieData = data;
+                weather = data;
                 render();
             },
 
@@ -45,13 +49,13 @@ $(function () {
     // render  function 
     function render() {
 
-        $city.text(movieData.name);
-        $temp.append(`${movieData.main.temp} <span>&#8457;</span>`);
-        $feel.append(`${movieData.main.feels_like} <span>&#8457;</span>`);
-        $weather.text(`${movieData.weather[0].description}`)
+        $city.text(weather.name);
+        $temp.text(`${weather.main.temp} F`);
+        $feel.text(`${weather.main.feels_like} F`);
+        $weather.text(`${weather.weather[0].description}`)
 
         //   console.log(JSON.stringify())
-        // console.log(typeof movieData.main[0])
+        // console.log(typeof weather.main[0])
     }
 
 
